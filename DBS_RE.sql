@@ -178,4 +178,12 @@ INNER JOIN SUBJECT SB ON SO.SubjCode = SB.SubjCode
 INNER JOIN TEACHER T ON T.StaffID = SO.StaffID;
 
 
+--Task 6
+SELECT * FROM Student
+--From this- I got the results I should - all the colunms from STUDENT
+SELECT COUNT(*) FROM Student
+--From this- I got the results I should - all the 4 colunms as a count from STUDENT
 
+/* Task 6- 
+I know they are working because I am getting the correct responses as I should and it is working fine,
+My code only matched the Query 2 with tables, so it works and that only means I've done Task 6 */
