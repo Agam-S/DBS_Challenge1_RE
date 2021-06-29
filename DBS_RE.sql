@@ -186,4 +186,4 @@ SELECT COUNT(*) FROM Student
 
 /* Task 6- 
 I know they are working because I am getting the correct responses as I should and it is working fine,
-My code only matched the Query 2 with tables, so it works and that only means I've done Task 6 */
+My code also matched the Query 2 with tables, so it works and that only means I've done Task 6 */
