@@ -169,3 +169,13 @@ WHERE (E.Fee =
 )
 )
 
+-- Task 5
+CREATE VIEW [DBS_VIEW1] AS
+Select S.GivenName, S.Surname, SO.SubjCode, SB.Description, SO.Year, SO.Semester, SO.Fee, T.GivenName, T.Surname FROM ENROLLMENT E
+LEFT JOIN STUDENT S ON S.StudentID = E.StudentID
+INNER JOIN SUBJECTOFFERING SO ON SO.SubjCode = E.SubjCode
+INNER JOIN SUBJECT SB ON SO.SubjCode = SB.SubjCode
+INNER JOIN TEACHER T ON T.StaffID = SO.StaffID;
+
+-- Task 6
+
