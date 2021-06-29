@@ -144,3 +144,28 @@ INSERT INTO ENROLLMENT(StudentID, SubjCode, Year, Semester, Grade, DateEnrolled)
 
 ('s45455669', 'ICTPRG418', 2020, 1, 'HD', '5/03/2020');
 
+SELECT * from Student;
+
+
+-- Query 1:
+Select S.GivenName, S.Surname, SO.SubjCode, SB.Description, 
+SO.Year, SO.Semester, SO.Fee, T.GivenName, T.Surname FROM ENROLLMENT E
+
+LEFT JOIN STUDENT S ON S.StudentID = E.StudentID
+INNER JOIN SUBJECTOFFERING SO ON SO.SubjCode = E.SubjCode
+INNER JOIN SUBJECT SB ON SO.SubjCode = SB.SubjCode
+INNER JOIN TEACHER T ON T.StaffID = SO.StaffID
+
+
+-- Query 2:
+Select Year, Semester, Count(StudentID) as NumOfEnrollemnts from Enrollment
+Group By Year, Semester
+
+-- Query 3:
+SELECT * from SUBJECTOFFERING E
+WHERE (E.Fee =
+(SELECT MAX(E.Fee) 
+    FROM SUBJECTOFFERING E
+)
+)
+
